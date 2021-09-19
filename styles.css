@@ -1,0 +1,27 @@
+/*
+* Reset.
+*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+* Variables.
+*/
+:root {
+	--clr-bg-body: #f2f2f2;
+	--clr-blue: #0065fc;
+	--clr-light-blue: #deebff;
+}
+
+/*
+* Body.
+*/
+body {
+	font-family: "Raleway", sans-serif;
+	background-color: var(--clr-bg-body);
+}
