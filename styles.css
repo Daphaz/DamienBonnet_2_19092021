@@ -373,7 +373,7 @@ main {
 	font-size: 2rem;
 	padding-bottom: 2.8rem;
 }
-.hebergement a {
+.hebergement .link_effect {
 	font-size: 2rem;
 	font-weight: bold;
 }
