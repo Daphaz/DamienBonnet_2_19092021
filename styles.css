@@ -554,6 +554,32 @@ main {
 }
 
 /*
+* Footer.
+*/
+footer {
+	background-color: #f2f2f2;
+}
+.footer {
+	display: flex;
+	padding: 5rem;
+}
+.footer__list {
+	list-style: none;
+}
+.footer__list:not(:last-child) {
+	padding-right: 23rem;
+}
+.footer__label {
+	font-size: 1.8rem;
+	font-weight: bold;
+	padding-bottom: 3rem;
+}
+.footer__link:not(:last-child) {
+	font-weight: 500;
+	padding-bottom: 2rem;
+}
+
+/*
 * Breakpoints.
 */
 /* Extra Large */
@@ -607,6 +633,10 @@ main {
 		gap: 3rem;
 		width: 100%;
 	}
+
+	.footer__list:not(:last-child) {
+		padding-right: 15rem;
+	}
 }
 /* Large */
 @media screen and (max-width: 992px) {
@@ -636,6 +666,10 @@ main {
 	.activities__container {
 		flex-wrap: wrap;
 	}
+
+	.footer__list:not(:last-child) {
+		padding-right: 7rem;
+	}
 }
 /* Medium */
 @media screen and (max-width: 768px) {
@@ -644,11 +678,11 @@ main {
 		gap: 0;
 	}
 	.populaire {
-		padding: 4rem 1.6rem 0;
+		padding: 4rem 2rem 0;
 	}
 
 	.hebergement {
-		padding: 4rem 1.6rem;
+		padding: 4rem 2rem;
 		background-color: #fff;
 	}
 	.populaire,
@@ -665,7 +699,7 @@ main {
 		padding-top: 2.2rem;
 	}
 	.header__logo {
-		padding-left: 1.6rem;
+		padding-left: 2rem;
 		padding-top: 0;
 		width: 10.7rem;
 	}
@@ -701,7 +735,7 @@ main {
 
 	.banner {
 		height: 20rem;
-		padding: 0 1.6rem;
+		padding: 0 2rem;
 		padding-top: 4.2rem;
 	}
 	.banner__title {
@@ -719,7 +753,7 @@ main {
 	}
 
 	.filter {
-		padding-left: 1.6rem;
+		padding-left: 2rem;
 		padding-top: inherit;
 		margin-bottom: 2.5rem;
 	}
@@ -749,7 +783,7 @@ main {
 	}
 
 	.activities {
-		padding: 2rem 1.6rem 0;
+		padding: 2rem 2rem 0;
 		margin-bottom: 3rem;
 	}
 	.activities img {
@@ -769,6 +803,17 @@ main {
 	}
 	#card-longchamp {
 		object-position: 50% 30%;
+	}
+
+	.footer {
+		flex-direction: column;
+		padding: 4.5rem 3rem;
+	}
+	.footer__list {
+		padding-bottom: 4.6rem;
+	}
+	.footer__list:not(:last-child) {
+		padding-right: 0;
 	}
 }
 
@@ -844,7 +889,8 @@ main {
 /* Extra Small */
 @media screen and (max-width: 320px) {
 	.search__input {
-		font-size: 1.2rem;
+		font-size: 1rem;
+		padding: 0.8rem 0.6rem;
 	}
 	.populaire .card {
 		height: auto;
