@@ -25,6 +25,9 @@ button {
 	font-family: inherit;
 	font-weight: inherit;
 }
+img {
+	vertical-align: middle;
+}
 
 /*
 * Variables.
@@ -56,6 +59,40 @@ main {
 	display: flex;
 	gap: 4rem;
 	padding: 0 5rem;
+}
+.col {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	width: 100%;
+	height: 44.5rem;
+	max-width: 30.4rem;
+}
+.col:first-child .card:first-child {
+	height: 23.5rem;
+}
+
+/*
+* Modifiers.
+*/
+#card-port {
+	object-position: 51% 25%;
+	object-fit: none;
+}
+#card-fort {
+	object-position: 50% 40%;
+}
+#card-frioul {
+	object-position: 50% 15%;
+}
+#card-calanques {
+	object-position: 45% 0%;
+}
+#card-dame {
+	object-position: 50% 0%;
+}
+#card-longchamp {
+	object-position: 50% 10%;
 }
 
 /*
@@ -411,6 +448,14 @@ main {
 .card__container .card {
 	flex-grow: 1;
 }
+.card-top {
+	height: 100%;
+	max-height: 23.5rem;
+}
+.card-bottom {
+	height: 100%;
+	max-height: 20.9rem;
+}
 
 .card-flex {
 	display: flex;
@@ -433,11 +478,15 @@ main {
 }
 
 .card__header {
+	position: relative; /**/
 	border-radius: 2rem 2rem 0 0;
 	overflow: hidden;
 	height: 11.5rem;
 }
 .card__header img {
+	position: absolute; /**/
+	top: 0; /**/
+	left: 0; /**/
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -465,6 +514,43 @@ main {
 }
 .stars-blue {
 	color: #0065fc;
+}
+
+/*
+* Activities.
+*/
+.activities {
+	padding: 7.3rem 5rem 0;
+	margin-bottom: 6rem;
+}
+.activities h2 {
+	padding-bottom: 3rem;
+}
+.activities__col {
+	display: flex;
+	gap: 4rem;
+	width: 50%;
+}
+.activities__container {
+	display: flex;
+	gap: 4rem;
+}
+.activities .card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 17rem;
+	border: none;
+}
+.activities__container .col .card {
+	flex-grow: 1;
+}
+.activities__container .card__header {
+	flex-grow: 1;
+}
+.activities__container .card__body {
+	flex-shrink: 0;
+	height: 5.5rem;
 }
 
 /*
@@ -510,6 +596,17 @@ main {
 	.card-flex .card__header img {
 		object-position: center center;
 	}
+
+	.activities__container .card__body {
+		height: auto;
+	}
+	.activities__container {
+		gap: 3rem;
+	}
+	.activities__col {
+		gap: 3rem;
+		width: 100%;
+	}
 }
 /* Large */
 @media screen and (max-width: 992px) {
@@ -535,6 +632,9 @@ main {
 	}
 	.filter__row {
 		margin-bottom: 2.4rem;
+	}
+	.activities__container {
+		flex-wrap: wrap;
 	}
 }
 /* Medium */
@@ -647,6 +747,29 @@ main {
 	.link_effect::after {
 		display: none;
 	}
+
+	.activities {
+		padding: 2rem 1.6rem 0;
+		margin-bottom: 3rem;
+	}
+	.activities img {
+		object-fit: cover !important;
+	}
+	#card-fort {
+		object-position: 50% 45%;
+	}
+	#card-frioul {
+		object-position: 50% 23%;
+	}
+	#card-calanques {
+		object-position: 45% 40%;
+	}
+	#card-dame {
+		object-position: 50% 20%;
+	}
+	#card-longchamp {
+		object-position: 50% 30%;
+	}
 }
 
 /* Small */
@@ -700,6 +823,22 @@ main {
 	}
 	.search__input {
 		width: inherit;
+	}
+
+	.activities__container,
+	.activities__col {
+		flex-direction: column;
+	}
+	.col,
+	.card-top,
+	.card-bottom {
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
+	}
+	.activities .card__header {
+		height: 100%;
+		max-height: 12rem;
 	}
 }
 /* Extra Small */
