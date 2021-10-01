@@ -791,8 +791,8 @@ footer {
 		padding: 2rem 2rem 0;
 		margin-bottom: 3rem;
 	}
-	.activities img {
-		object-fit: cover !important;
+	#card-port {
+		object-fit: cover;
 	}
 	#card-fort {
 		object-position: 50% 45%;
