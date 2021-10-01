@@ -42,9 +42,12 @@ img {
 * Body.
 */
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: Arial, sans-serif;
 	background-color: var(--clr-bg-body);
 	font-size: 1.6rem;
+}
+body.fontLoaded {
+	font-family: "Raleway", sans-serif;
 }
 
 /*
